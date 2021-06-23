@@ -107,22 +107,29 @@ def editDistDPWeighted(str1, str2, m, n):
 	PrintMatrix(dp,str1, str2, m ,n)
 	return dp[m][n]
 
-while True:
-	print('\n')
-	print("Enter 1 for Mininum Edit Distance")
-	print("Enter 2 for Levenshtein Distance")
-	print("Press e to exit the program Levenshtein Distance")
 
-	choice = input("Enter your choice: ")
-	if choice == 'e' or choice == 'E':
-		break
+def main():
+	while True:
+		print('\n')
+		print("Enter 1 for Mininum Edit Distance")
+		print("Enter 2 for Levenshtein Distance")
+		print("Press e to exit the program Levenshtein Distance")
 
-	str1 = input("Enter String 1: ")
-	str2 = input("Enter String 2: ")
+		choice = input("Enter your choice: ")
+		if choice == 'e' or choice == 'E':
+			break
 
-	
-	if choice == '1':
-		print("Minimum Edit Distance: ", editDistDPMinEdit(str1, str2, len(str1), len(str2)))
-	
-	if choice == '2':
-		print("Minimum Levenshtein Distance: ", editDistDPLevenshtein(str1, str2, len(str1), len(str2)))
+		str1 = input("Enter String 1: ")
+		str2 = input("Enter String 2: ")
+
+		
+		if choice == '1':
+			print("Minimum Edit Distance: ", editDistDPMinEdit(str1, str2, len(str1), len(str2)))
+		
+		if choice == '2':
+			print("Minimum Levenshtein Distance: ", editDistDPLevenshtein(str1, str2, len(str1), len(str2)))
+
+
+
+if __name__ == '__main__':
+    main()
